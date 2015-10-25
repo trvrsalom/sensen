@@ -28,6 +28,7 @@ app.post("/api/uniqueID", function(req, res) {
 })
 
 app.post("/api/updateSensor", function(req, res) {
+	console.log(req.body);
 	res.json({"uid": req.body.uid, "data": req.body.data, status: "Success"})
 	var data = []
 	base.child("sensors").child(req.body.uid).child(new Date().getTime().toString()).child(req.body.data.unit).set(req.body.data.dataparams)

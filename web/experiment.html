@@ -16,14 +16,16 @@
       <div class="sixteen wide column">
         <div class="ui segment">
           <h1>_expname</h1>
-          <div class="ui selection dropdown multiple">
-            <input type="hidden" name="chartselect" id="chartselectinput">
+	    <div id="legend"></div>
+            <a class="ui right labeled icon button" download="data.json"><i class="cloud download icon"></i>Download Data</a>
+          <div style="display:none" class="ui selection dropdown multiple">
+	    <input type="hidden" name="chartselect" id="chartselectinput">
             <i class="dropdown icon"></i>
-            <div class="default text">Data Source</div>
+            <div class="default text" style="display:none">Data Source</div>
             <div class="menu" id="dataoption">
 
             </div>
-            <div id="legend">
+            <div id="legendgraph">
 
             </div>
           </div>

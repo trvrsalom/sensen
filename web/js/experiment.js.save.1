@@ -53,14 +53,10 @@ function getExp() {
     genNTHGraph(d.logs);
   });
 }
-var lastColor = 0;
+
 function randomColor(alpha) { 
-    var pcolors = ["rgba(52, 152, 219,1.0)", "rgba(46, 204, 113,1.0)", "rgba(231, 76, 60,1.0)"];
-    var toReturn = pcolors[lastColor];
-    lastColor = lastColor == 2 ? 0 : lastColor + 1;
-    console.log(toReturn);
-    return toReturn;
-}
+	var poscolors = ["
+ }
 
 var legend = {};
 
@@ -136,7 +132,6 @@ function genNTHGraph(valsArray) {
 
     var dataArraysWithNull = {}
     for (sensor in dataList) {
-	console.log(sensor);
       for (time in timeListFinal) {
         var thisDataEntry = dataList[sensor][timeListFinal[time]];
 
@@ -154,7 +149,7 @@ function genNTHGraph(valsArray) {
     }
     return {timeList: timeListFinal, data: dataArraysWithNull};
   }
-  //$("#legend").html("");
+
   for (var val in valsArray) {
     //console.log("val", val);
     //Add to title lis
@@ -170,12 +165,11 @@ function genNTHGraph(valsArray) {
       plotData.datasets = [];
       plotData.labels = d.timeList;
       for (dataset in d.data) {
-	//console.log("pls work", val);
+	//console.log("rip", dataset);
         colorset[dataset] = colorset[dataset] == undefined ? randomColor(1) : colorset[dataset];
-	//$("#legend").append("<div style='display: inline-block;border-radius:1000px;background-color:" + titles[dataset] + ";min-height: 10px;min-width:10px'></div> " + titles[dataset] + "<br />");
 	plotData.datasets.push({
             label: dataset,
-            fillColor: "rgba(46, 204, 113,0.0)",
+            fillColor: randomColor(0.0),
             strokeColor: colorset[dataset],
             pointColor: color[dataset],
             pointStrokeColor: "#fff",
