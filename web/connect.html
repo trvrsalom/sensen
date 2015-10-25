@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Sense^N</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="ui menu">
+      <div class="item">
+        <img src="sensen_logo.gif">
+      </div>
+      <a class="item" href="connect.html">Connect</a>
+    </div>
+    <div class="ui page grid">
+      <div class="sixteen wide column">
+        <div class="ui segment">
+          <h1>Connect to an experiment</h1>
+          <table class="ui selectable celled table">
+            <thead>
+              <tr>
+                <th>Experiment Name</th>
+                <th>Experiment ID</th>
+                <th>Experimenter</th>
+              </tr>
+            </thead>
+            <tbody id="experimentstable">
+            </tbody>
+          </table>
+          <form class="ui form">
+            <div class="two fields">
+              <div class="field">
+                <label>Experiment Name</label>
+                <input type="text" id="exprname" name="experiment-name" placeholder="Experiment Name">
+              </div>
+              <div class="field">
+                <label>Your Name</label>
+                <input type="text" id="username" name="your-name" placeholder="Your Name">
+              </div>
+            </div>
+            <button class="ui button" onclick="createExperiment()" type="button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/connect.js"></script>
+  </body>
+</html>

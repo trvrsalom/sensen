@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Sense^N</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="ui menu">
+      <div class="item">
+        <img src="sensen_logo.gif">
+      </div>
+      <a class="item" href="connect.html">Connect</a>
+    </div>
+    <div class="ui page grid">
+      <div class="sixteen wide column">
+        <div class="ui segment">
+          <h1>_expname</h1>
+          <div class="ui selection dropdown multiple">
+            <input type="hidden" name="chartselect" id="chartselectinput">
+            <i class="dropdown icon"></i>
+            <div class="default text">Data Source</div>
+            <div class="menu" id="dataoption">
+
+            </div>
+            <div id="legend">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/experiment.js"></script>
+  </body>
+</html>
